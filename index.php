@@ -1,18 +1,25 @@
-<?php get_header(); ?>
+<?php 
 
+get_header();
+
+?>
 <div class="all_content">
-<?php
-  if ( have_posts() ) {
-    if ( is_home() && ! is_front_page() ) {
-      while ( have_posts() ) {
-        the_post();
+
+<?php 
+  if ( have_posts( ) ){
+    if( is_home() ){
+      while ( have_posts( ) ){
+        the_post( );
+
+        get_template_part('content');
       }
     }
-  } else {
-    echo "sin post";
+  }else{
+    echo "No hay posts";
   }
 
   get_sidebar();
-?>
-</div>
-<?php get_footer(); ?>
+  ?>
+
+  </div>
+  <?php get_footer(); ?>
