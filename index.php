@@ -11,6 +11,8 @@
   } else {
     echo "sin post";
   }
+
+  get_sidebar();
 ?>
 </div>
 <?php get_footer(); ?>
